@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework</title>
+    <style>
+        .form{
+  background-color: white;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  }
+  button{
+    background-color: rgb(87, 108, 228);
+   margin: auto;
+   display: block;
+  }
+    </style>
 
 </head>
-<body>
-
-    <h1>Application form</h1>
+<body style="background-color: azure;">
+<div class="form">
+    <h2  style="text-align: center;">Application form</h2>
     <form>
         <label for="ad" >Ad:</label><br>
         <input type="text"  id="ad" name="ad"><br>
         <label for="soyad">Soyad:</label><br>
         <input type="text" id="soyad" name="soyad"><br>
         <label for="shifre">Şifrə:</label><br>
-        <input type="text"id="shifre" name="shifre"><br>
+        <input type="password"id="shifre" name="shifre"><br>
 
     </form>
     <p>Cinsinizi seçin:</p>
-    <input type="radio" id="qadın" name="cins" value="Qadın">
     <label for="qadın">Q</label>
+    <input type="radio" id="qadın" name="cins" value="Qadın">
+    <label for="kişi">K</label>
     <input type="radio" id="kişi" name="cins" value="Kişi">
-    <label for="kişi">K</label><br>
+
 
     <p>Bitirdiyiniz təhsil dərəcələrini seçin: </p>
     <input type="checkbox" id="orta" name="orta" value="orta">
@@ -36,13 +50,13 @@
 
     <form>
         <label for="yaş">Yaş:</label><br>
-        <input type="number" id="yaş" name="yaş"><br>
+        <input type="number" id="yaş" name="yaş" min="0"><br>
         <label for="boy">Boy:</label><br>
-        <input type="number" id="boy" name="boy"><br>
+        <input type="number" id="boy" name="boy" min="0"><br>
         <label for="çəki">Çəki:</label><br>
-        <input type="number"id="çəki" name="çəki"><br>
+        <input type="number"id="çəki" name="çəki" min="0"><br>
     </form>
-    <button type="button" onclick="alert('Qeydiyyatınız uğurla tamamlanmışdır!')">Təsdiqlə</button>
-
+    <button type="submit" onclick="alert('Qeydiyyatınız uğurla tamamlanmışdır!')">Təsdiqlə</button>
+</div>
 </body>
 </html>
